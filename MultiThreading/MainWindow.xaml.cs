@@ -24,5 +24,31 @@ namespace MultiThreading
         {
             InitializeComponent();
         }
+
+
+        private void Btn_Task_Click(object sender, RoutedEventArgs e)
+        {
+            Lbl_Risultato.Content = "Risultato: ";
+            Task.Factory.StartNew(DoWork);
+        }
+
+        // Metodo 
+        private void DoWork()
+        {
+            for (int i = 0; i <= 10000; i++)
+            {
+                for (int j = 0; j < 10000; j++)
+                {
+
+                }
+            }
+
+            Dispatcher.Invoke(AggiornaInterfaccia);
+        }
+
+        private void AggiornaInterfaccia()
+        {
+            Lbl_Risultato.Content += "Finito";
+        }
     }
 }

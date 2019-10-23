@@ -5,10 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultiThreading"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="Btn_Task" Content="Button" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="75"/>
-        <Label x:Name="Lbl_Risultato" Content="Label" HorizontalAlignment="Left" Margin="358,226,0,0" VerticalAlignment="Top"/>
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid Background="#FFC5FF00">
+        
+        <!--Button per i processi-->
+        <Button x:Name="Btn_Task" Content="Button" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="75" Background="#FF80FF00" BorderBrush="#FF80FF00" Click="Btn_Task_Click"/>
+        
+        <!--Label per indicare il risultato-->
+        <Label x:Name="Lbl_Risultato" Content="" HorizontalAlignment="Center" Margin="0,226,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
